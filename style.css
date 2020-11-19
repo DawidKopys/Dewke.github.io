@@ -1,0 +1,249 @@
+@font-face {
+    src: url(./fonts/montserrat/Montserrat-Light.otf);
+    font-family: Montserrat;
+    font-weight: normal;
+}
+
+@font-face {
+    src: url(./fonts/montserrat/Montserrat-Regular.otf);
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+@font-face {
+    src: url(./fonts/montserrat/Montserrat-Medium.otf);
+    font-family: Montserrat-Medium;
+    font-weight: normal;
+}
+
+@font-face {
+    src: url(./fonts/montserrat/Montserrat-Bold.otf);
+    font-family: Montserrat-Medium;
+    font-weight: bold;
+}
+
+/* Typography */
+p {
+    font-family: Montserrat;
+}
+
+h2 {
+    font-family: Montserrat-Medium;
+    font-weight: normal;
+    font-size: 1.3rem;
+}
+
+:root {
+    --color-bg-blue: hsl(207, 70%, 60%);
+    /* --color-navbar-blue: hsl(207, 94%, 94%); */
+    --color-navbar-blue: rgba(225, 241, 254, .85);
+    --color-btn-blue: hsl(209, 96%, 70%);
+    --color-bg-card-blue: hsl(207, 80%, 68%);
+    --color-borders-blue:  hsl(210, 53%, 53%);
+    --max-width-page: 1200px;
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    background-color: var(--color-bg-blue);
+}
+
+/* Basic styling */
+.main {
+    padding: 0.5rem;
+    max-width: var(--max-width-page);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content {
+    min-width: 600px;
+}
+
+.sidebar {
+    background-color: hsl(207, 94%, 85%);
+    box-shadow: 2px 2px 6px rgba(255, 255, 255, 0.4);
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.card {
+    background-color: var(--color-bg-card-blue);
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.card:nth-child(1) {
+    margin-top: 0;
+}
+
+.card:last-child {
+    margin-bottom: 0;
+}
+
+.btn {
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#btn1 {
+    background-image: url('./icons/icons8-download-from-the-cloud-40.png');
+}
+#btn2 {
+    background-image: url('./icons/icons8-bookmark-40.png');
+}
+#btn3 {
+    background-image: url('./icons/icons8-delete-40.png');
+}
+#btn4 {
+    background-image: url('./icons/icons8-edit-40.png');
+}
+#btn5 {
+    background-image: url('./icons/icons8-plus-40.png');
+}
+
+.navbar-content {
+    max-width: var(--max-width-page);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar {
+    background-color: var(--color-navbar-blue);
+}
+
+.btn:hover {
+    background-color: var(--color-btn-blue);
+    cursor: pointer;
+}
+
+/* main Layout */
+
+.main {
+    margin-top: 65px;
+}
+
+.sidebar {
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 335px;
+    }
+
+    .sidebar {
+        display: block;
+    }
+}
+
+.navbar-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar .btn {
+    display: inline-block;
+}
+
+.navbar-left, .navbar-right {
+    flex-grow: 1;
+    line-height: 0;
+}
+
+.navbar-right .btn {
+    float: right;
+}
+
+.navbar {
+    position: fixed;
+    top: 1px;
+    border: 2px solid var(--color-borders-blue);
+    border-radius: 2px;
+    width: 100%;
+}
+
+/* dropdown menu */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 30px;
+    right: 29px;
+    border: 2px solid var(--color-borders-blue);
+    border-radius: 2px;
+  }
+
+  /* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: var(--color-btn-blue);}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+/* cards */
+.card {
+    box-shadow: 2px 2px 6px rgba(255, 255, 255, 0.4);
+}
+
+/* clearfix hack */
+.card::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.card img {
+    float: left;
+    margin-right: 1em;
+}
+
+.card img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card h2:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card p:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card img {
+    cursor: pointer;
+}
+
