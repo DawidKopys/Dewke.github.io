@@ -34,7 +34,7 @@ h2 {
 }
 
 :root {
-    --color-bg-blue: hsl(207, 70%, 60%);
+    --color-bg-blue: #1C1C1C;
     /* --color-navbar-blue: hsl(207, 94%, 94%); */
     --color-navbar-blue: rgba(225, 241, 254, .85);
     --color-btn-blue: hsl(209, 96%, 70%);
